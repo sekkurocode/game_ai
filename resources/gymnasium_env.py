@@ -1,7 +1,10 @@
 import gymnasium as gym
+import ale_py
+
+gym.register_envs(ale_py)
 
 # Initialise the environment
-env = gym.make("LunarLander-v3", render_mode="human")
+env = gym.make("ALE/MsPacman-v5", render_mode="human")
 
 # Reset the environment to generate the first observation
 observation, info = env.reset(seed=42)
